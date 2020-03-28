@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vita Form</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body style="font-family: arial, sans-serif;">
+	<div id="maindiv" name="maindiv">
+		<div id="formdiv">
+			<marquee id="mar" behavior="alternate" direction="right" scrollamount="5"><font>WELCOME TO E-DUKAN</font></marquee>
+			
+			<h1 align="center">Application Form</h1>
+			
+			<form id="frm" name="frm">
+				<label id="l1">First name</label>
+				<input type="text" name="fname" id="fname" placeholder="First name"
+				onkeypress="return capname('fname', event)"  onfocusout="checkname(this.value,'sp1')" required/>
+				<span id="sp1"></span>
+				
+				<label id="l1">Middle name</label> 
+				<input type="text" name="mname" id="mname" placeholder="Middle name" onkeypress="return capname('mname', event)" onfocusout="checkname(this.value,'sp2')" required/>
+				<span id="sp2"></span>
+				
+				<label id="l1">Last name</label> 
+				<input type="text" name="lname" id="lname" placeholder="Last name" onkeypress="return capname('lname', event)" onfocusout="checkname(this.value,'sp3')" required/>
+				<span id="sp3"></span>
+				<br/>
+
+				<label id="l1">UserId</label> 
+				<input type="text" name="uid" id="uid" placeholder="UserId" onfocusout="checkpass(this.value,'u1')" onchange="checkuserId(this.value,'u1')" required/>
+				<span id="u1"></span>
+				
+				<label id="l1" style="margin-left: 0px;">Email id</label> 
+				<input type="text" name="email" id="email" placeholder="Email" onchange="checkEmail(this.value,'e1')" required/>
+				<span id="e1"></span>
+				<br>
+				
+				<label id="l1">Password</label> <input type="password" name="pass" id="pass" placeholder="Password" onfocusout="checkpass(this.value,'u2')" required/><span id="u2"></span>
+				<label id="l1">Re-Enter Password</label> <input type="password" name="rpass" id="rpass" placeholder="Password" onchange="checkifSame()"required/>
+				
+				<label id="l1">Mobile no</label> <input type="text" name="mob" id="mob" placeholder="Mobile no" onkeypress="return capmob1('mob', event)" required/>
+				<span id="m1"></span>
+				
+				<h3>Permanent Address</h3>
+				<br/>
+				<label>Address</label>
+				 <textarea name="add" id="add" placeholder="Address" rows="4" cols="50" required></textarea>
+				<br/>
+				
+				<label>City</label>
+				<input type="text" name="city" id="city" placeholder="City" onchange="checkname(this.value,'sp4')" required/>
+				<span id="sp4"></span>
+				
+				<label>Landmark</label> 
+				<input type="text" name="land" id="land" placeholder="Landmark" onchange="checkname(this.value,'sp5')" required/>
+				<span id="sp5"></span>
+				
+				<label>State</label> 
+				<input type="text" name="state" id="state" placeholder="State" onchange="checkname(this.value,'sp6')" required/>
+				<span id="sp6"></span>
+				
+				<label>Pincode</label> 
+				<input type="text" name="pin" id="pin" placeholder="Pincode" onchange="checkpin(this.value, 'pin1')" required/>
+				<span id="pin1"></span>
+				<br/>
+				
+				<input type="checkbox" name="chk1" id="chk1" onclick="copyAddr(this.checked)" required/>
+				<label>Is temporary address is same as permanent address</label>
+				
+				<h3>Temporary Address</h3>
+				<br/>
+				
+				<label>Address</label>
+				<textarea name="add" id="add1" placeholder="Address" rows="4" cols="50" required></textarea>
+				<br/>
+				
+				<label>City</label> 
+				<input type="text" name="city" id="city1" placeholder="City" onchange="checkname(this.value,'sp7')" required/>
+				<span id="sp7"></span>
+				
+				<label>Landmark</label> 
+				<input type="text" name="land" id="land1" placeholder="Landmark" onchange="checkname(this.value,'sp8')" required/>
+				<span id="sp8"></span>
+				
+				<label>State</label> 
+				<input type="text" name="state" id="state1" placeholder="State" onchange="checkname(this.value,'sp9')" required/>
+				<span id="sp9"></span>
+				
+				<label>Pincode</label> 
+				<input type="text" name="pin2" id="pin2" placeholder="Pincode" onchange="checkpin(this.value, 'pin3')" required/>
+				<span id="pin3"></span>
+				<br/>
+				
+				<label>Gender</label>
+				<input type="radio" name="gen" value="m"/>Male
+				<input type="radio" name="gen" value="m"/>Female
+				<label> Select Products </label>
+				<select name="Products" id="Products">
+					<option>Choose Product </option>
+					<option>Product 1</option>
+					<option>Product 2</option>
+					<option>Product 2</option>
+					<option>Product 4</option>
+					<option>Product 5</option>
+					<option>Product 6</option>
+					<option>Product 7</option>
+					<option>Product 8</option>
+					<option>Product 9</option>
+				</select>
+				<div name="tablediv" id="tablediv">
+					<table name="producttable" id="producttable">
+						<tr name="tablerow" id="tr1">
+						<th>Check box</th>
+						<th>Product Image</th>
+						<th>Details</th>
+						<th>Price (In Rs.)</th>
+						<th>Quantity</th>
+						<th>Amount</th>
+						</tr>
+						<tr name="tablerow" id="tr2">
+							<td><input type="checkbox" onclick="checkme(this.checked, 'vp1', 'tp1', 'tr1-amt')" name="p1"/></td>
+							<td><img src="css/img/p1.jpg" style="height: 75px; width: 75px; "></td>
+							<td>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+							</td>
+							<td id="vp1">500</td>
+							<td><input type="number" min="1" max="10" name="tp1" id="tp1" onclick="mul('vp1', 'tp1', 'tr1-amt')" disabled="true" onkeypress="return false"></td>
+							<td id="tr1-amt" name="amt"></td>
+						</tr>
+						<tr name="tablerow" id="tr3">
+							<td><input type="checkbox" onclick="checkme(this.checked, 'vp2', 'tp2', 'tr2-amt')" name="p1"/></td>
+							<td><img src="css/img/p1.jpg" style="height: 75px; width: 75px; "></td>
+							<td>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+							</td>
+							<td id="vp2">500</td>
+							<td><input type="number" min="1" max="10" name="tp2" id="tp2" onclick="mul('vp2', 'tp2', 'tr2-amt')" disabled="true" onkeypress="return false"></td>
+							<td id="tr2-amt" name="amt"></td>
+						</tr>
+						<tr name="tablerow" id="tr4">
+							<td><input type="checkbox" onclick="checkme(this.checked, 'vp3', 'tp3', 'tr3-amt')" name="p1"/></td>
+							<td><img src="css/img/p1.jpg" style="height: 75px; width: 75px; "></td>
+							<td>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+							</td>
+							<td id="vp3">500</td>
+							<td><input type="number" min="1" max="10" name="tp3" id="tp3" onclick="mul('vp3', 'tp3', 'tr3-amt')" disabled="true" onkeypress="return false"></td>
+							<td id="tr3-amt" name="amt"></td>
+						</tr>
+						<tr name="tablerow" id="tr5">
+							<td><input type="checkbox" onclick="checkme(this.checked, 'vp4', 'tp4', 'tr4-amt')" name="p1"/></td>
+							<td><img src="css/img/p1.jpg" style="height: 75px; width: 75px; "></td>
+							<td>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+								<b>Name:</b>Product 1<br>
+							</td>
+							<td id="vp4">500</td>
+							<td><input type="number" min="1" max="10" name="tp4" id="tp4" onclick="mul('vp4', 'tp4', 'tr4-amt')" disabled="true" onkeypress="return false"></td>
+							<td id="tr4-amt" name="amt"></td>
+						</tr>
+						<tr name="tablerow" id="tr5">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><b>Total Amount: </b></td>
+							<td id="total-amt" >00<span>&nbsp&nbspRs./-</span></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<input type="submit" name="btn1">
+					<input type="reset" name="btn2">
+				</div>
+			</form>
+		</div>
+		<div></div>
+	</div>
+</body>
+</html>

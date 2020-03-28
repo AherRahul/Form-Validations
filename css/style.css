@@ -1,0 +1,48 @@
+#mar
+{
+	padding: 15px;
+	background-color: #383838; 
+	color: #fff;
+	font-weight: 500px;
+	font-family: geogria;
+	font-size: 25px;
+}
+#frm
+{
+	margin: 30px 100px 50px 100px;
+	background-color: #E8E8E8;
+	padding: 45px;
+	
+}
+#fname, #mname, #lname, #uid, #pass, #rpass, #mob
+{
+
+	padding: 10px 14px;
+	background-color: #f8f8f8;
+	border-color: #404040;
+	border-radius: 10px;
+	margin-top: 15px;
+
+}
+#rpass, #mob
+{
+	padding-right: 0px;
+	padding-left: 5px;
+}
+#uid
+{
+	margin-left: 25px;
+}
+#email
+{
+	padding: 10px 350px 10px 10px;
+	background-color: #f8f8f8;
+	border-color: #404040;
+	border-radius: 10px;
+	margin: 15px 0px 0px 40px;
+}
+#l1
+{
+	padding: 0px 10px 0px 35px;
+	font-weight: 600;
+}
